@@ -36,7 +36,7 @@ client.on('interactionCreate', async i => {
     catch { return i.editReply('❌ 網址讀取失敗'); }
   }
   const chat = await openai.chat.completions.create({
-    model: 'gpt-o4mini',
+    model: 'gpt-3.5-turbo',
     messages: [
       { role: 'system', content: '你是專業摘要助手，回答請用繁體中文，不超過 200 字。' },
       { role: 'user', content: text }
